@@ -63,3 +63,6 @@ Xシェア機能をつけることで朝活に興味のある人をアプリに�
 ■ 機能の実装方針予定
 　Line API
   X(Twitter) API
+
+■ 画面遷移図
+　https://www.figma.com/design/4u2BxFsaqcmEF41hEpAfTA/enjoy%E6%9C%9D%E6%B4%BB%EF%BC%8F%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?t=arPbVYfStj3OWWeS-0
