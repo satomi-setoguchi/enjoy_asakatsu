@@ -19,6 +19,8 @@ COPY entrypoint.sh /usr/bin/
 # entrypoint.shの実行権限を付与
 RUN chmod +x /usr/bin/entrypoint.sh
 
+RUN apt-get update && apt-get install -y nodejs npm
+
 # コンテナ起動時にentrypoint.shを実行するように設定
 ENTRYPOINT ["entrypoint.sh"]
 
