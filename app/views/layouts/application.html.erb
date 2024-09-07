@@ -11,7 +11,11 @@
   </head>
 
   <body class="d-flex flex-column vh-100">
-    <%= render 'shared/header' %>
+    <% if user_signed_in? %>
+      <%= render 'shared/login_header' %>
+    <% else %>
+      <%= render 'shared/logout_header' %>
+    <% end %>
     <main class="mb-auto">
       <%= yield %>
     </main>
