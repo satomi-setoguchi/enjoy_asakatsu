@@ -1,5 +1,4 @@
-@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
-@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap');
 
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
 address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;}
@@ -14,8 +13,9 @@ img,abbr,acronym,fieldset{border:0;}
 
 body{
 	font: 14px/1.9;
-    font-family: "M PLUS Rounded 1c";
-	font-weight: 300;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 	-webkit-text-size-adjust:100%;
 	overflow-x: hidden;
 	color: #515070;
@@ -32,6 +32,32 @@ a:hover, .active{
 }
 
 a:active, a:focus,input:active, input:focus{outline:0;}
+
+/*---header---*/
+
+.navbar{
+  background: #FF8E6E;
+  height: 80px;
+}
+
+.navbar-brand{
+  height: 80px;
+}
+
+.navbar-brand img{
+  height: 80px;
+  width: auto;
+}
+
+.d-inline-block{
+  font-family: "M PLUS Rounded 1c";
+  color: #fff;
+}
+/*---footer---*/
+footer{
+  background: #FFBB91;
+  height: 100px;
+}
 
 /*---Top----*/
 
