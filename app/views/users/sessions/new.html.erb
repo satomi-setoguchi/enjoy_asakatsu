@@ -1,5 +1,7 @@
-<h2>Log in</h2>
-
+<div class="container">
+  <div class="row">
+    <div class="mx-auto p-2" style="width: 184px;">
+      <h2>ログイン</h2>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
@@ -19,8 +21,11 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "ログイン" %>
   </div>
 <% end %>
 
 <%= render "users/shared/links" %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+ja:
+  helpers:
+    submit:
+      create: 登録
+      submit: 保存
+      update: 更新
+      send: 送信
+    label:
+  header:
+    sign_up: 新規登録
+    login: ログイン
+    logout: ログアウト
+    my_page: マイページ
+    record_show: 記録一覧
+    post_show: 投稿一覧
+  footer:
+    terms_of_service: 利用規約
+    privacy_policy: プライバシーポリシー
+    contact: お問い合わせ
