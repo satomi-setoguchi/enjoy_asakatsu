@@ -1,0 +1,22 @@
+<header>
+  <nav class='navbar navbar-expand-lg'>
+    <div class="container-fluid">
+      <%= link_to root_path, class: 'navbar-brand' do %>
+        <div class="d-inline-block align-text-top">
+          <%= image_tag 'logo.png' %>
+          ENJOY朝活
+        </div>
+      <% end %>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class='navbar-toggler-icon'></span>
+      </button>
+      <div class='collapse navbar-collapse'>
+        <div class='navbar-nav ms-auto main-nav align-items-center'>
+          <%= link_to "新規登録", "#", class:'nav-link' %>
+          <%= link_to "マイページ", "#", class: 'nav-link' %>
+          <%= link_to "ログアウト", "#", class: 'nav-link', data: { turbo_method: :delete } %>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
