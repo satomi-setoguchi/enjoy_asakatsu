@@ -16,6 +16,11 @@
     <% else %>
       <%= render 'shared/logout_header' %>
     <% end %>
+
+    <% flash.each do |type, message| %>
+      <%= content_tag(:div, message, class: "alert alert-#{type == 'notice' ? 'success' : 'danger'}") %>
+    <% end %>
+    
     <main class="mb-auto">
       <%= yield %>
     </main>
