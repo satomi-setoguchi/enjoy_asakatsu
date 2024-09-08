@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap');
 
+$accent-color: #515070;
+
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
 address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;}
 ul{list-style:none;}
@@ -32,6 +34,20 @@ a:hover, .active{
 }
 
 a:active, a:focus,input:active, input:focus{outline:0;}
+
+.btn-custom {
+  font-weight: 500;
+  color: var(--bs-white);
+  background: $accent-color;
+  border-color: $accent-color;
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #{shade-color($accent-color, 30%)};
+  --bs-btn-hover-border-color: #{shade-color($accent-color, 30%)};
+  --bs-btn-focus-shadow-rgb: $accent-color;
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #{shade-color($accent-color, 20%)};
+  --bs-btn-active-border-color: #{shade-color($accent-color, 20%)};
+}
 
 /*---header---*/
 
