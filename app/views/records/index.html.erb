@@ -1,0 +1,9 @@
+<h2 class="text-center mt-4 mb-3"><%= t('.title') %></h2>
+  <%= month_calendar(record: @records) do |date, records| %>
+    <%= link_to date.day, "#" %>
+    <% records.each do |record| %>
+        <div>
+          <%= record.contain %>
+        </div>
+      <% end %>
+  <% end %>
