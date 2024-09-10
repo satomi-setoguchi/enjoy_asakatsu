@@ -1,9 +1,12 @@
 <h2 class="text-center mt-4 mb-3"><%= t('.title') %></h2>
-  <%= month_calendar(record: @records) do |date, records| %>
-    <%= link_to date.day, "#" %>
+  <%= month_calendar(attribute: :date, events: @records) do |date, records| %>
+    <%= date.day %>
     <% records.each do |record| %>
         <div>
-          <%= record.contain %>
+          <%= link_to record.content, record_path(record) %>
         </div>
       <% end %>
   <% end %>
+
+  <%= link_to t('.new'), new_record_path %>
+  
