@@ -3,6 +3,7 @@ ja:
     formats:
       time: '%H:%M'
   defaults:
+    delete_confirm: "削除しますか？"
   flash_message:
     created: "%{item}を作成しました"
   helpers:
@@ -40,6 +41,7 @@ ja:
       title: 記録詳細
       edit: 編集する
       back: 一覧へ戻る
+      destroy: 削除する
     new:
       new: 記録の作成
       title: 記録の編集
