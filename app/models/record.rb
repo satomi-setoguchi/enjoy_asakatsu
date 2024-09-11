@@ -1,5 +1,5 @@
 class Record < ApplicationRecord
-  belongs_to :user, dependent: :destroy
+  belongs_to :user
 
   validates :date, presence: true
   validates :started_time, presence: true
