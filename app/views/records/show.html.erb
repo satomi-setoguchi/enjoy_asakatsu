@@ -1,3 +1,31 @@
-<h2 class="text-center mt-4 mb-3"><%= t('.title') %></h2>
-  <%= link_to t('.edit'), edit_record_path(@record)  %>
-  <%= link_to t('.back'), records_path %>
+<div class="container">
+  <h2 class="text-center mt-4 mb-3"><%= t('.title') %></h2>
+    <article class="card">
+      <div class="card-body">
+        <ul class="card-text">
+          <li>日付：<%= @record.date %></li>
+          <li>開始時刻：<%= l @record.started_time, format: :time %></li>
+          <li>終了時刻：<%= l @record.finished_time, format: :time %></li>
+        </ul>
+        <p class='card-text'>活動内容:
+        <div class='card card-gray', style="width: 25rem;">
+          <div class="card-body">
+            <p class='card-text'><%= @record.content %>
+          </div>
+        </div>
+        <p class='card-text'>メモ:
+        <div class='card card-gray', style="width: 28rem;">
+          <div class="card-body">
+            <p class='card-text'><%= @record.memo %>
+          </div>
+        </div>
+      </div>
+  </article>
+</div>
+
+<div class="d-flex justify-content-center mt-2">
+  <%= link_to t('.edit'), edit_record_path(@record), class: 'btn btn-custom col-2' %>
+</div>
+<div class="d-flex justify-content-center mt-2">
+  <%= link_to t('.back'), records_path, class: 'btn btn-custom col-2' %>
+</div>
