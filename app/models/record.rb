@@ -1,6 +1,6 @@
 class Record < ApplicationRecord
   belongs_to :user
-  has_many :post, dependent: :destroy
+  has_many :post
 
   validates :date, presence: true
   validates :started_time, presence: true
