@@ -2,10 +2,12 @@ ja:
   time:
     formats:
       time: '%H:%M'
+      date_time: '%Y-%m-%d %H:%M'
   defaults:
     delete_confirm: "削除しますか？"
   flash_message:
     created: "%{item}を作成しました"
+    not_created: "%{item}を作成できませんでした"
   helpers:
     submit:
       create: 登録
@@ -47,6 +49,17 @@ ja:
       title: 記録の編集
     edit:
       title: 記録の編集
+  posts:
+    index:
+      title: 投稿一覧
+      new: 新規投稿
+    post:
+      active_time: 活動時間：
+      content: 活動内容：
+    form:
+      select_date: 日付から記録を選択
+    new:
+      title: 新規投稿
   simple_calendar:
     previous: "<<"
     next: ">>"

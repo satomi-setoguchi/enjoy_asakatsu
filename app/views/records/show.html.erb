@@ -1,19 +1,19 @@
 <div class="container">
   <h2 class="text-center mt-4 mb-3"><%= t('.title') %></h2>
-  <div class="mx-auto", style="width: 640px">
+  <div class="col-md-8 col-sm-10 mx-auto">
     <ul>
       <li>日付：<%= @record.date %></li>
       <li>開始時刻：<%= l @record.started_time, format: :time %></li>
       <li>終了時刻：<%= l @record.finished_time, format: :time %></li>
     </ul>
     <p>活動内容:
-    <div class='card', style="width: 25rem;">
+    <div class='card col-7'>
       <div class="card-body">
         <p class='card-text'><%= simple_format(@record.content) %>
       </div>
     </div>
     <p>メモ:
-    <div class='card', style="width: 40rem;">
+    <div class='card'>
       <div class="card-body">
         <p class='card-text'><%= simple_format(@record.memo) %>
       </div>

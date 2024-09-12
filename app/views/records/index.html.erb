@@ -1,29 +1,35 @@
 <h2 class="text-center mt-4 mb-3"><%= t('.title') %></h2>
-  <%= month_calendar(attribute: :date, events: @records) do |date, records| %>
-    <%= date.day %>
-    <% records.each do |record| %>
-        <div>
-          <%= link_to record.content, record_path(record) %>
-        </div>
+<div class="container">
+  <div class="row">
+    <div class="col-10 mx-auto">
+      <%= month_calendar(attribute: :date, events: @records) do |date, records| %>
+        <%= date.day %>
+        <% records.each do |record| %>
+          <div>
+            <%= link_to record.content, record_path(record) %>
+          </div>
+        <% end %>
       <% end %>
-  <% end %>
-<div class='row text-center'>
-  <div class='col'>
-    <i class="bi bi-square-fill square1"></i>:〜1時間
-  </div>
-  <div class='col'>
-    <i class="bi bi-square-fill square2"></i>:1時間〜
-  </div>
-  <div class='col'>
-    <i class="bi bi-square-fill square3"></i>:2時間〜
-  </div>
-  <div class='col'>
-    <i class="bi bi-square-fill square4"></i>:3時間〜
-  </div>
-</div>
+        <div class='row text-center'>
+          <div class='col'>
+            <i class="bi bi-square-fill square1"></i>:1時間未満
+          </div>
+          <div class='col'>
+            <i class="bi bi-square-fill square2"></i>:1時間〜
+          </div>
+          <div class='col'>
+            <i class="bi bi-square-fill square3"></i>:2時間〜
+          </div>
+          <div class='col'>
+            <i class="bi bi-square-fill square4"></i>:3時間〜
+          </div>
+        </div>
  
-<div class="mt-3">
-  <div class="d-flex justify-content-around">
-    <%= link_to t('.new'), new_record_path, class: 'btn btn-custom col-2' %>
+        <div class="mt-3">
+          <div class="d-flex justify-content-around">
+            <%= link_to t('.new'), new_record_path, class: 'btn btn-custom col-2' %>
+          </div>
+        </div>
+    </div>
   </div>
 </div>

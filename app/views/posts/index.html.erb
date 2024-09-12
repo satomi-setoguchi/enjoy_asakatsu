@@ -1,0 +1,15 @@
+<h2 class="text-center mt-4 mb-3"><%= t('.title') %></h2>
+<div class="d-flex justify-content-center mt-5">
+  <%= link_to t('.new'), new_post_path, class: 'btn btn-custom col-2' %>
+</div>
+<div class="container">
+  <div class="row">
+    <div class='col-md-8 col-sm-10 mx-auto'>
+      <% if @posts.present? %>
+        <%= render @posts %>
+      <% else %>
+        <div class="text-center mb-3">**掲示板がありません**</div>
+      <% end %>
+    </div>
+  </div>
+</div>
