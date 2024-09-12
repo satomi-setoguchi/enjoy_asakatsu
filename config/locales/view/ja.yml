@@ -6,6 +6,7 @@ ja:
     delete_confirm: "削除しますか？"
   flash_message:
     created: "%{item}を作成しました"
+    not_created: "%{item}を作成できませんでした"
   helpers:
     submit:
       create: 登録
@@ -47,6 +48,12 @@ ja:
       title: 記録の編集
     edit:
       title: 記録の編集
+  posts:
+    index:
+      title: 投稿一覧
+      new: 新規投稿
+    new:
+      title: 新規投稿
   simple_calendar:
     previous: "<<"
     next: ">>"

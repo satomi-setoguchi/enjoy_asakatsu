@@ -1,0 +1,15 @@
+<%= form_with model: @post, local: true do |f| %>
+  <%= render 'shared/error_message', object: f.object  %>
+    <div class= 'form_group'>
+      <%= f.label :body %>
+      <%= f.text_area :body, class: 'form-control' %>
+    </div>
+    <div class='form-group'>
+      <%= f.label :image %>
+      <%= f.file_field :image, class: 'form-control' %>
+    </div>
+    
+    
+    <%= f.submit nil, class: 'btn btn-custom col-2 mt-2' %>
+  <% end %>
+   

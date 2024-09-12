@@ -2,6 +2,7 @@ ja:
   activerecord:
     models:
       record: 記録
+      post: 投稿
     attributes:
       record:
         date: 日付
@@ -9,3 +10,6 @@ ja:
         finished_time: 終了時刻
         content: 活動内容
         memo: メモ
+      post:
+        body: 内容
+        image: 画像

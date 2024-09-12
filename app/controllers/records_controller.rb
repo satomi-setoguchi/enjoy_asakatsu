@@ -15,9 +15,9 @@ class RecordsController < ApplicationController
   def create
     @record = current_user.records.build(record_params)
     if @record.save
-      redirect_to records_path, success: "作成しました"
+      redirect_to records_path, success: t('flash_message.created', item: '記録')
     else
-      flash.now[:danger] = "作成できませんでした"
+      flash.now[:danger] = t('flash_message.not_created', item: '記録')
       render 'new', status: :unprocessable_entity
     end
   end
