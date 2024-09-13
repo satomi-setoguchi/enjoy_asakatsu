@@ -4,10 +4,14 @@ ja:
       time: '%H:%M'
       date_time: '%Y-%m-%d %H:%M'
   defaults:
-    delete_confirm: "削除しますか？"
+    delete_confirm: 削除しますか？
+    delete_caution: 記録に関連する投稿も削除しますがよろしいですか？
   flash_message:
     created: "%{item}を作成しました"
     not_created: "%{item}を作成できませんでした"
+    updated: "%{item}を更新しました"
+    not_updated: "%{item}を更新できませんでした"
+    deleted: "%{item}を削除しました"
   helpers:
     submit:
       create: 登録
@@ -60,6 +64,12 @@ ja:
       select_date: 日付から記録を選択
     new:
       title: 新規投稿
+    edit:
+      title: 投稿編集
+    show:
+      title: 投稿詳細
+      active_time: 活動時間：
+      content: 活動内容：
   simple_calendar:
     previous: "<<"
     next: ">>"

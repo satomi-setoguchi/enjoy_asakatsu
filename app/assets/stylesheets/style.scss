@@ -49,6 +49,16 @@ a:active, a:focus,input:active, input:focus{outline:0;}
   --bs-btn-active-border-color: #{shade-color($accent-color, 20%)};
 }
 
+.text-black{
+  color: black;
+}
+
+.text-black:hover, .active{
+  text-decoration: underline;
+  color: black;
+}
+
+
 /*---header---*/
 
 .navbar{
@@ -123,3 +133,13 @@ footer{
   height: auto;
   object-fit: cover;
 }
+
+.bi-pencil-square{
+  color: #515070;
+}
+
+.bi-trash-fill{
+  color: #515070;
+}
+
+

@@ -16,14 +16,18 @@
       <% end %>
       <div class="p-1"><%= l post.created_at, format: :date_time %></div>
     </div>
-    <p class="card-text col-10 mx-auto mb-3"><%= post.body %></p>
-    <div class="col-10 mx-auto">
-      <% if post.image.present? %>
-        <div class="text-center">
-          <%= image_tag post.image_url, class:"image-resize" %>
+    <%= link_to(post_path(post)) do %>
+      <div class="text-black">
+        <p class="card-text col-10 mx-auto mb-3"><%= post.body %></p>
+        <div class="col-10 mx-auto">
+          <% if post.image.present? %>
+            <div class="text-center">
+              <%= image_tag post.image_url, class:"image-resize" %>
+            </div>
+          <% end %>
         </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
     <div class="card col-10 mx-auto mt-3">
       <div class="card-text">
         <p class='mx-3 mt-2'>
