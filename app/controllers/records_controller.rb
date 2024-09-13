@@ -15,9 +15,9 @@ class RecordsController < ApplicationController
   def create
     @record = current_user.records.build(record_params)
     if @record.save
-      redirect_to records_path, success: t('flash_message.created', item: '記録')
+      redirect_to records_path, success: t('flash_message.created', item: Record.model_name.human)
     else
-      flash.now[:danger] = t('flash_message.not_created', item: '記録')
+      flash.now[:danger] = t('flash_message.not_created', item: Post.model_name.human)
       render 'new', status: :unprocessable_entity
     end
   end
@@ -29,9 +29,9 @@ class RecordsController < ApplicationController
   def update
     @record = current_user.records.find(params[:id])
     if @record.update(record_params)
-      redirect_to record_path(@record), success: "保存しました"
+      redirect_to record_path(@record), success: t('flash_message.updated', item: Record.model_name.human)
     else
-      flash.now[:danger] = "保存できませんでした"
+      flash.now[:danger] = t('flash_message.updated', item: Record.model_name.human)
       render :edit, status: :unprocessable_entity
     end
   end
