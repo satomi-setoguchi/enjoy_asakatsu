@@ -1,0 +1,15 @@
+<div class="card mt-3" id="comment-form">
+  <div class="card-body">
+    <%= form_with model: comment, url: post_comments_path(post) do |f| %>
+      <%= render "shared/error_message", object: f.object %>
+      <div class="d-flex">
+        <div class="p-2 flex-grow-1">
+          <%= f.text_area :body, placeholder: t('.placeholder'), class:"col-11 p-2" %>
+        </div>
+        <div class="p-2">
+          <%= f.submit nil, class: "btn btn-custom" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

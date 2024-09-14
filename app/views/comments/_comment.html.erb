@@ -1,0 +1,22 @@
+<div class="card my-3", id="comment-<%= comment.id %>">
+  <div class="card-body">
+    <div class="card-title d-flex">
+      <div class="p-1 flex-grow-1">
+        ><%= comment.user.name %>
+      </div>
+      <div class="p-1">
+        <% if current_user.own?(comment) %>
+          <%= link_to comment_path(comment), data: { turbo_method: :delete, turbo_confirm: t('defaults.delete_confirm') }  do %>
+            <i class="bi bi-trash-fill"></i>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="p-1">
+        <%= l comment.created_at, format: :date_time %>
+      </div>
+      </div> 
+    <div class="card-text mx-3">
+      <%= comment.body %>
+    </div>
+  </div>
+</div>

@@ -3,6 +3,7 @@ ja:
     models:
       record: 記録
       post: 投稿
+      comment: コメント
     attributes:
       record:
         date: 日付
@@ -13,3 +14,5 @@ ja:
       post:
         body: 内容
         image: 画像
+      comment:
+        body: コメント

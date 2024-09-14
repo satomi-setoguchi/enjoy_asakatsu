@@ -2,46 +2,53 @@
 <div class="container">
   <div class="row">
     <div class='col-md-8 col-sm-10 mx-auto'>
-    <div class="card mt-4">
-    <div class="card-body">
-      <div class="card-title d-flex">
-        <div class="p-1 flex-grow-1"><%= @post.user.name %></div>
-        <% if current_user.own?(@post) %>
-          <div class='p-1'>
-            <%= link_to edit_post_path(@post) do %>
-              <i class='bi bi-pencil-square'></i>
+      <div class="card mt-4">
+        <div class="card-body">
+          <div class="card-title d-flex">
+            <div class="p-1 flex-grow-1"><%= @post.user.name %></div>
+            <% if current_user.own?(@post) %>
+              <div class='p-1'>
+                <%= link_to edit_post_path(@post) do %>
+                  <i class='bi bi-pencil-square'></i>
+                <% end %>
+              </div>
+              <div class='p-1'>
+                <%= link_to post_path(@post), data: { turbo_method: :delete, turbo_confirm: t('defaults.delete_confirm') }  do %>
+                  <i class="bi bi-trash-fill"></i>
+                <% end %>
+              </div>
+            <% end %>
+            <div class="p-1"><%= l @post.created_at, format: :date_time %></div>
+          </div>
+          <p class="card-text col-10 mx-auto mb-3"><%= @post.body %></p>
+          <div class="col-10 mx-auto">
+            <% if @post.image.present? %>
+              <div class="text-center">
+                <%= image_tag @post.image_url, class:"image-resize" %>
+              </div>
             <% end %>
           </div>
-          <div class='p-1'>
-          <%= link_to post_path(@post), data: { turbo_method: :delete, turbo_confirm: t('defaults.delete_confirm') }  do %>
-            <i class="bi bi-trash-fill"></i>
-          <% end %>
+          <div class="card col-10 mx-auto mt-3">
+            <div class="card-text">
+              <p class='mx-3 mt-2'>
+                <%= t('.active_time')%>
+                <%= l @post.record.started_time, format: :time %>~<%= l @post.record.finished_time, format: :time %>
+              </p>
+              <p class='mx-3 my-2'>
+                <%= t('.content')%>
+                <%= @post.record.content %>
+              </p>
+            </div>
           </div>
-        <% end %>
-        <div class="p-1"><%= l @post.created_at, format: :date_time %></div>
-      </div>
-      <p class="card-text col-10 mx-auto mb-3"><%= @post.body %></p>
-      <div class="col-10 mx-auto">
-        <% if @post.image.present? %>
-          <div class="text-center">
-            <%= image_tag @post.image_url, class:"image-resize" %>
+          <div class="card-text text-end me-2 mt-1">
+            <i class="bi bi-chat-right-dots mx-1"></i><%= @post.comments.size %>
           </div>
-        <% end %>
-      </div>
-      <div class="card col-10 mx-auto mt-3">
-        <div class="card-text">
-          <p class='mx-3 mt-2'>
-            <%= t('.active_time')%>
-            <%= l @post.record.started_time, format: :time %>~<%= l @post.record.finished_time, format: :time %>
-          </p>
-          <p class='mx-3 my-2'>
-            <%= t('.content')%>
-            <%= @post.record.content %>
-          </p>
         </div>
       </div>
-    </div>
-  </div>
+      <%= render 'comments/form', comment: @comment, post: @post %>   
+      <div id="comment-table">
+        <%= render @comments %>
+      </div> 
     </div>
   </div>
 </div>
