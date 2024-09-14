@@ -2,7 +2,7 @@ ja:
   time:
     formats:
       time: '%H:%M'
-      date_time: '%Y-%m-%d %H:%M'
+      date_time: '%m/%d %H:%M'
   defaults:
     delete_confirm: 削除しますか？
     delete_caution: 記録に関連する投稿も削除しますがよろしいですか？
@@ -70,6 +70,9 @@ ja:
       title: 投稿詳細
       active_time: 活動時間：
       content: 活動内容：
+  comments:
+    form:
+      placeholder: コメント
   simple_calendar:
     previous: "<<"
     next: ">>"
