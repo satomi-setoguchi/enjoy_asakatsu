@@ -1,4 +1,4 @@
-<div class="card mt-3" id="comment-form">
+<div class="card my-3" id="comment-form">
   <div class="card-body">
     <%= form_with model: comment, url: post_comments_path(post) do |f| %>
       <%= render "shared/error_message", object: f.object %>

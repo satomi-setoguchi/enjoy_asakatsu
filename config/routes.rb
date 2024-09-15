@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   resources :posts do
     resources :comments, shallow: true
   end
-  
+  get 'sample', to: 'static_pages#sample'
   root "static_pages#top"
 end

@@ -39,6 +39,11 @@ ja:
     top:
       login: ログイン
       sign_up: 新規登録
+      record_new: 記録の作成
+      click_to_sample: サンプル画面を見る
+    sample:
+      title: サンプルページ
+      back: 戻る
   records:
     index:
       title: 記録一覧
