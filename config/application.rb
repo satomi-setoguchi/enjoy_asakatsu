@@ -25,6 +25,7 @@ module Myapp
     # config.eager_load_paths << Rails.root.join("extras")
     config.time_zone = 'Tokyo'
     config.active_record.default_timezone = :local
+    config.hosts << 'xxx.onrender.com'
   end
 end
 module I18nApp
