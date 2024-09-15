@@ -64,7 +64,7 @@ group :development, :test do
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec'
-  gem "mysql2", "~> 0.5"
+  gem 'sqlite3', '~> 2.0'
 end
 
 group :development do
