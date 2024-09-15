@@ -64,7 +64,7 @@ group :development, :test do
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec'
-  gem 'sqlite3', '~> 2.0'
+  gem "mysql2", "~> 0.5"
 end
 
 group :development do
@@ -84,4 +84,8 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+end
+
+group :production do
+  gem "pg", "~> 1.4"
 end
