@@ -9,7 +9,7 @@ gem "rails", "~> 7.1.4"
 gem "sprockets-rails"
 
 # Use mysql as the database for Active Record
-gem "mysql2", "~> 0.5"
+
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
@@ -64,6 +64,7 @@ group :development, :test do
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec'
+  gem "mysql2", "~> 0.5"
 end
 
 group :development do
@@ -83,4 +84,8 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+end
+
+group :production do
+  gem "pg"
 end

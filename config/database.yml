@@ -50,6 +50,8 @@ test:
 #
 production:
   <<: *default
-  database: enjoy_asakatsu_production
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   username: user
   password: <%= ENV["MYAPP_DATABASE_PASSWORD"] %>
