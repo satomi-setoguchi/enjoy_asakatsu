@@ -18,7 +18,7 @@
     </div>
     <%= link_to(post_path(post)) do %>
       <div class="text-black">
-        <p class="card-text col-10 mx-auto mb-3"><%= post.body %></p>
+        <div class="card-text col-10 mx-auto mb-3"><%= simple_format(post.body) %></div>
         <div class="col-10 mx-auto">
           <% if post.image.present? %>
             <div class="text-center">
