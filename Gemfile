@@ -63,7 +63,7 @@ group :development, :test do
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec'
-  gem "pg", "~> 0.5"
+  gem "pg"
 end
 
 group :development do
@@ -83,8 +83,4 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
-end
-
-group :production do
-  gem "pg"
 end
