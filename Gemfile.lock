@@ -199,6 +199,7 @@ GEM
     parser (3.3.5.0)
       ast (~> 2.4.1)
       racc
+    pg (1.5.8)
     popper_js (2.11.8)
     pry (0.14.2)
       coderay (~> 1.1)
@@ -363,6 +364,7 @@ DEPENDENCIES
   jbuilder
   jquery-rails
   mysql2 (~> 0.5)
+  pg
   pry-byebug
   puma (>= 5.0)
   rails (~> 7.1.4)
