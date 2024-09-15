@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby "3.1.4"
 
-# Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
+
 gem "rails", "~> 7.1.4"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
@@ -84,8 +84,4 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
-end
-
-group :production do
-  gem "pg", "~> 1.4"
 end
