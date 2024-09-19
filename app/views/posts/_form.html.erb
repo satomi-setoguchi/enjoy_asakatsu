@@ -13,7 +13,7 @@
       <%= f.collection_select :record_id, current_user.records.all, :id, :date, class: 'form-control' %>
     </div>
     <% if @post.image.present? %>
-      <div class='form-group mt-2'>
+      <div class='form-group col-10 mt-2'>
         <%= image_tag @post.image.url, class: 'img-thumbnail' %>
         <%= check_box_tag 'post[remove_image]', '1', false %> 画像を削除する
       </div>
