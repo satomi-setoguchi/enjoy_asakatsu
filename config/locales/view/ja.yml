@@ -77,6 +77,9 @@ ja:
   comments:
     form:
       placeholder: コメント
+  profiles:
+    show:
+      title: プロフィール詳細
   simple_calendar:
     previous: "<<"
     next: ">>"
