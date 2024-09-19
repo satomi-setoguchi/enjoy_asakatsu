@@ -5,7 +5,7 @@ class Record < ApplicationRecord
   validates :date, presence: true
   validates :started_time, presence: true
   validates :finished_time, presence: true
-  validates :content, length: { maximum: 255 }
+  validates :content, presence: true, length: { maximum: 25 }
   validates :memo, length: { maximum: 65_535 }
 
   def active_time

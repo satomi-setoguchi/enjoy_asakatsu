@@ -54,8 +54,7 @@ ja:
       back: 一覧へ戻る
       destroy: 削除する
     new:
-      new: 記録の作成
-      title: 記録の編集
+      title: 記録の作成
     edit:
       title: 記録の編集
   posts:
