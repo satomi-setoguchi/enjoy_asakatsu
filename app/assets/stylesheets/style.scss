@@ -138,4 +138,11 @@ footer{
   color: #515070;
 }
 
+/*---profile#show---*/
 
+#avatar img{
+  max-width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  background: #ffffff;
+}
