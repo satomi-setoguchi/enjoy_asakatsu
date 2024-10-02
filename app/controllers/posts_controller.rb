@@ -43,6 +43,11 @@ class PostsController < ApplicationController
     redirect_to posts_path, status: :see_other, success: t('flash_message.deleted', item: Post.model_name.human)
   end
 
+  def my_post_index
+    @user = User.find(current_user.id)
+    @posts = current_user.posts
+  end
+
   private
 
   def post_params

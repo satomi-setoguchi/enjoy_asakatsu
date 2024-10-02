@@ -1,0 +1,12 @@
+<h2 class="text-center mt-4 mb-3"><%= @user.name %>さんの<%= t('.title') %></h2>
+<div class="container">
+  <div class="row">
+    <div class='col-md-8 col-sm-10 mx-auto'>
+      <% if @posts.present? %>
+        <%= render @posts %>
+      <% else %>
+        <div class="text-center mb-3">**掲示板がありません**</div>
+      <% end %>
+    </div>
+  </div>
+</div>

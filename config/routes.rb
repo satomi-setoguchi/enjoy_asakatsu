@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :records
   resources :posts do
+    get 'my_post_index', on: :collection
     resources :comments, shallow: true
   end
   resource :profile, only: %i[show edit update]
