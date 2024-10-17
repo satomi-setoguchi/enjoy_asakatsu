@@ -1,0 +1,43 @@
+<h2 class="text-center mt-4 mb-3"><%= t('.title') %></h2>
+<div class="container">
+  <div class="row">
+    <div class='col-md-8 col-sm-10 mx-auto'>
+      <div class="card m-4">
+        <div class="card-body">
+          <div class="col-5 mx-auto", id='avatar'>
+            <% if @user.avatar.present? %>
+              <%= image_tag @user.avatar.url, class:"rounded-circle border" %>
+            <% else %>
+              <%= image_tag "default_avatar.png", class: "rounded-circle border" %>
+            <% end %>
+          </div>
+          <div class="card-title">
+            <div class="text-center">
+              <%= @user.name %>
+              <%= link_to edit_user_registration_path do %>
+                <i class='bi bi-pencil-square'></i>
+              <% end %>
+            </div>
+          </div>
+          <div class="card-text">
+            <div class="text-center pb-3 border-bottom">
+              <% if @user.introduction.present? %>
+                <%= @user.introduction %>
+              <% else %>
+                <%= t('.introduction') %>
+              <% end %>
+            </div>
+            <div class="d-flex justify-content-evenly">
+              <%= t('.records') %>
+              <%= link_to @user.records.length, records_path %>
+            </div>
+            <div class="d-flex justify-content-evenly">
+              <%= t('.posts') %>
+              <%= link_to @user.posts.length, my_post_index_posts_path %>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>

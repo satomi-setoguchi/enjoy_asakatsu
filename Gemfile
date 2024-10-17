@@ -51,6 +51,7 @@ gem 'devise'
 gem 'devise-i18n'
 gem "simple_calendar"
 gem 'carrierwave', '~> 3.0'
+gem 'ransack'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
