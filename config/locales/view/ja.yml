@@ -79,6 +79,10 @@ ja:
   comments:
     form:
       placeholder: コメント
+  users:
+    registrations:
+      edit:
+        title: プロフィール編集
   profiles:
     show:
       title: プロフィール詳細

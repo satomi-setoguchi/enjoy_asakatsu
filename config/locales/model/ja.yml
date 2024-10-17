@@ -5,6 +5,10 @@ ja:
       post: 投稿
       comment: コメント
     attributes:
+      user:
+        name: ニックネーム
+        introduction: 自己紹介
+        avatar: プロフィール画像
       record:
         date: 日付
         started_time: 開始時刻
