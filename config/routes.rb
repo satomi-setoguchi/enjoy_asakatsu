@@ -8,7 +8,6 @@ Rails.application.routes.draw do
     resources :comments, shallow: true
   end
   resource :profile, only: %i[show]
-
   get 'sample', to: 'static_pages#sample'
   root "static_pages#top"
 end
