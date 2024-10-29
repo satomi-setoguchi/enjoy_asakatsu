@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  get 'users/show'
   devise_for :users, controllers: {
     registrations: "users/registrations"
   }
+  resources :users, only: [:show]
   resources :records
   resources :posts do
     get 'my_post_index', on: :collection
