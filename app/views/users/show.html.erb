@@ -1,0 +1,103 @@
+<h2 class="text-center mt-4 mb-3"><%= t('.title') %></h2>
+<div class="container">
+  <div class="row row-cols-2">
+    <div class="col-md-8 col-sm-10 mx-auto">
+      <div class="card m-4">
+        <div class="card-header">
+          <%=t('.recently_record') %>
+        </div>
+        <div class="card-body">
+          <%= month_calendar(attribute: :date, events: @records) do |date, records| %>
+            <%= date.day %>
+            <% records.each do |record| %>
+              <div>
+                <%= link_to record.content, record_path(record) %>
+              </div>
+            <% end %>
+          <% end %>
+          <div class='row text-center'>
+            <div class='col'>
+              <i class="bi bi-square-fill square1"></i>:1時間未満
+            </div>
+            <div class='col'>
+              <i class="bi bi-square-fill square2"></i>:1時間〜
+            </div>
+            <div class='col'>
+              <i class="bi bi-square-fill square3"></i>:2時間〜
+            </div>
+            <div class='col'>
+              <i class="bi bi-square-fill square4"></i>:3時間〜
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card m-4">
+        <div class="card-header">
+          <%= t('.recently_post') %>
+        </div>
+        <div class="card-body">
+          <div class='col-md-10 col-sm-10 mx-auto'>
+            <% if @posts.present? %>
+              <%= render @posts %>
+            <% else %>
+              <div class="text-center mb-3">**投稿がありません**</div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  
+    <div class="col-md-4 col-sm-10 mx-auto">
+      <div class="card m-4">
+        <div class="card-body">
+          <div class="card-title text-center"><%= t('.profile') %></div>
+          <div class="col-5 mx-auto", id='avatar'>
+          <% if @user.avatar.present? %>
+            <%= image_tag @user.avatar.url, class:"rounded-circle border" %>
+          <% else %>
+            <%= image_tag "default_avatar.png", class: "rounded-circle border" %>
+          <% end %>
+          </div>
+          <div class="card-text">
+            <div class="text-center">
+              <%= @user.name %>
+              <%= link_to edit_user_registration_path do %>
+                <i class='bi bi-pencil-square'></i>
+              <% end %>
+            </div>
+            <div class="text-center pb-3 border-bottom">
+              <% if @user.introduction.present? %>
+                <%= @user.introduction %>
+              <% else %>
+                <%= t('.introduction') %>
+              <% end %>
+            </div>
+            <div class="d-flex justify-content-evenly">
+              <%= t('.records') %>
+              <%= link_to @user.records.length, records_path %>
+            </div>
+            <div class="d-flex justify-content-evenly">
+              <%= t('.posts') %>
+              <%= link_to @user.posts.length, my_post_index_posts_path %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card m-4">
+        <div class="card-header">
+          <%= t('.line_alarm') %>
+        </div>
+        <div class="card-body">
+          <div class='text-center'><%= t('.setting_time') %></div>
+          <div class='text-center'>
+            <%= link_to t('.setting'), '#', class: 'btn btn-custom col-8' %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

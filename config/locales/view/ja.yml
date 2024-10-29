@@ -80,6 +80,17 @@ ja:
     form:
       placeholder: コメント
   users:
+    show:
+      title: マイページ
+      recently_record: 最近の記録
+      recently_post: 最近の投稿
+      profile: プロフィール
+      introduction: よろしくお願いします。
+      records: 記録
+      posts: 投稿
+      line_alarm: LINEで朝活お知らせ通知
+      setting_time: 現在の設定時刻：
+      setting: 時刻設定
     registrations:
       edit:
         title: プロフィール編集

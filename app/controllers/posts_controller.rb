@@ -45,7 +45,7 @@ class PostsController < ApplicationController
 
   def my_post_index
     @user = User.find(current_user.id)
-    @posts = current_user.posts
+    @posts = current_user.posts.order(created_at: :desc)
   end
 
   private
