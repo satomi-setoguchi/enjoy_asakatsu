@@ -1,0 +1,19 @@
+<% @users.each do |user| %> 
+  <div class="card my-1">
+    <div class="card-body row align-items-center">
+      <div class="col-2", id='avatar'>
+        <% if user.avatar.present? %>
+          <%= image_tag user.avatar.url, class:"rounded-circle border" %>
+        <% else %>
+          <%= image_tag "default_avatar.png", class: "rounded-circle border" %>
+        <% end %>
+      </div>
+      <div class="col-4">
+        <%= link_to user.name, profile_path(user.id) %>
+      </div>
+      <div class="col-6">
+        <%= user.introduction %>
+      </div>
+    </div>
+  </div>
+<% end %>
