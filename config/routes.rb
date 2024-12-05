@@ -3,13 +3,21 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
     registrations: "users/registrations"
   }
-  resources :users, only: [:show]
+  resources :users, only: %i[index show] do
+    resource :relationships, only: %i[create destroy] do
+      member do
+        get :followings, :followers
+      end
+    end
+  end
   resources :records
   resources :posts do
-    get 'my_post_index', on: :collection
+    member do
+      get :my_post_index
+    end
     resources :comments, shallow: true
   end
-  resource :profile, only: %i[show]
+  resources :profiles, only: %i[show]
   get 'sample', to: 'static_pages#sample'
   root "static_pages#top"
 end

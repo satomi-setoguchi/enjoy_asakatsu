@@ -37,6 +37,7 @@ ja:
     contact: お問い合わせ
   static_pages:
     top:
+      title: ホーム
       login: ログイン
       sign_up: 新規登録
       record_new: 記録の作成
@@ -88,18 +89,32 @@ ja:
       introduction: よろしくお願いします。
       records: 記録
       posts: 投稿
+      followings: フォロー
+      followers: フォロワー
       line_alarm: LINEで朝活お知らせ通知
       setting_time: 現在の設定時刻：
       setting: 時刻設定
     registrations:
+      new:
+        title: 新規登録
       edit:
         title: プロフィール編集
+    sessions:
+      new:
+        title: ログイン
   profiles:
     show:
       title: プロフィール詳細
       introduction: よろしくお願いします。
       records: 記録
       posts: 投稿
+      followings: フォロー
+      followers: フォロワー
+  relationships:
+    followings:
+      title: フォロー一覧
+    followers:
+      title: フォロワー一覧
   simple_calendar:
     previous: "<<"
     next: ">>"
