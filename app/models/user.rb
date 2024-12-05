@@ -2,6 +2,10 @@ class User < ApplicationRecord
   has_many :records, dependent: :destroy
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :active_relationships, class_name: "Relationship", foreign_key: "follower_id", dependent: :destroy
+  has_many :passive_relationships, class_name: "Relationship", foreign_key: "followee_id", dependent: :destroy
+  has_many :followings, through: :active_relationships, source: :followee
+  has_many :followers, through: :passive_relationships, source: :follower
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -18,5 +22,17 @@ class User < ApplicationRecord
 
   def own?(object)
     object.user_id == id
+  end
+
+  def follow(user)
+    followings << user
+  end
+
+  def unfollow(user)
+    followings.destroy(user)
+  end
+
+  def following?(user)
+    followings.include?(user)
   end
 end

@@ -1,3 +1,4 @@
+<% content_for :title, t('.title') %>
 <h2 class="text-center mt-4 mb-3"><%= t('.title') %></h2>
 <div class="container">
   <div class="row">
@@ -18,6 +19,9 @@
                 <% end %>
               </div>
             <% end %>
+            <div class="p-1">
+              <%= render "relationships/relationship_btn",  { post: @post } %>
+            </div>
             <div class="p-1"><%= l @post.created_at, format: :date_time %></div>
           </div>
           <p class="card-text col-10 mx-auto mb-3"><%= @post.body %></p>
